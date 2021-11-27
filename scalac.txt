@@ -1,0 +1,111 @@
+Literals
+A literal (or literal data) is the data that appears directly in the source code, like the number 5, the character A, and the text "Hello, World"
+
+scala> 5
+res0: Int = 5
+
+scala> 'A'
+res1: Char = A
+
+scala> "Hello"
+res2: String = Hello
+-----------
+
+scala> val str "Hello"
+str: String = Hello
+
+scala> str
+res4: String = Hello
+
+scala> println(s"$str")
+Hello
+
+scala> println(s"$str James")
+Hello James
+-------
+scala> 5L
+resX: Long = 5
+
+scala> 6f
+resX: Float = 6.0
+
+scala> 5l
+resX: Long = 5
+
+
+
+----
+Variable
+a variable is a mutable, typed storage unit. A variable can be assigned data when it is defined and can also be reassigned data at any time.
+
+var "name"[:"type"] = "data|"
+
+Variable typically refers to a reserved memory space, into which values can be stored and from which values can be retrieved.
+As long as the memory space is reserved, it can be asssigned new values over and over again. Thus, the contents of the memory space are dinamic, or variable.
+
+scala> var x:Int = 5
+x: Int = 5
+
+scala> x = 10
+x: Int = 10 
+
+scala> x
+res15: Int = 10
+
+------ Double
+
+scala> var x:Double = 5.5
+x: Int = 5.5
+
+scala> x = 5
+x: Double = 5.0
+
+// redondeo a 5
+
+-----------------
+if-else
+
+IF Expression
+if("boolean expresion")"expression"
+
+Example:
+scala> if(47 % 3 > 0) println("Not a multiple of 3")
+
+IF-ELSE EXPRESSION
+
+if("boolean expresion")"expression"
+else "expression"
+
+Example:
+scala> val x = 10;
+val y = 20
+
+x: Int = 10
+y: Int =20
+scala> val max = if(x > y) x else y
+max: Int = 20
+
+
+-------
+ funtions
+
+funtions are the core biulding blocks of reusable logic.
+Funtions are named, reusable expressions.They may be parameterized and they may return a value
+
+Structure:
+def "iidentifier"("identifier":"type"[,...]):"type" = "expression"
+
+Example:
+def multiplier(x:Int, y:Int):Int = {x*y}
+
+val x = multiplier(2,4)
+
+---
+procedures
+a procedure is a funtion that doesn't have a return value. Any funtion that ends with a statement, such as a println() call, is also a procedure.
+
+def log(d:Double) = println(f"Got value $d%.2f")
+def log(d:Double): Unit = println(f"Got value $d%.2f")
+
+def logImplicit(d: Double) = printl("Got value $d%.2f")
+val x =lgImplicit(2.456455)
